@@ -15,7 +15,7 @@ variable "password" {
 variable "ssh_private_key" {
   description = "ssh private key content"
   type        = string
-  default     = "C:/Users/sai/Downloads/sai1.pem"
+  default     = data.github_repository_file.ssh_private.content
 }
 
 variable "ssh_public_key" {
