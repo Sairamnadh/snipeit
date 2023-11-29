@@ -103,7 +103,7 @@ resource "azurerm_linux_virtual_machine" "test_snipeit" {
     connection {
       type        = "ssh"
       user        = var.username
-      private_key = file("key.pem")
+      private_key = var.ssh_private_key
       host        = azurerm_public_ip.ram_public_ip.ip_address
     }
   }
