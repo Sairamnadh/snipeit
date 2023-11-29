@@ -9,4 +9,9 @@ terraform {
 
 provider "azurerm" {
   features {}
+ subscription_id = secret.AZURE_SUBSCRIPTION_ID
+  client_id       = secrets.AZURE_AD_CLIENT_ID
+  client_secret   = secrets.AZURE_AD_CLIENT_SECRET
+  tenant_id       = secrets.AZURE_AD_TENENT_ID
+
 }
